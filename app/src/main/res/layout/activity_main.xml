@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".MainActivity">
 <!--    tools:viewBindingIgnore="true"-->
 
@@ -12,10 +13,21 @@
         android:id="@+id/jump_secend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="jump"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="jump" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/test_secend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jump2"
+        android:layout_below="@+id/jump_secend"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/third_secend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jump3"
+        android:layout_below="@+id/test_secend"
+        android:layout_marginTop="15dp" />
+</RelativeLayout>
