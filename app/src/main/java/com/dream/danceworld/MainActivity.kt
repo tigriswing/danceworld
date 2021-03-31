@@ -1,5 +1,6 @@
 package com.dream.danceworld
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,8 +15,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.jumpSecend.setOnClickListener(View.OnClickListener {
-            ARouter.getInstance().build("/dm/secend").navigation()
+        val uri = Uri.parse("arouter://m.aliyun.com/dm/secend?nameva=value1")
+        binding.jumpSecend.setOnClickListener({
+            ARouter.getInstance().build(uri).navigation()
         })
     }
 }
