@@ -24,6 +24,10 @@ class SecendActivity : AppCompatActivity() {
 
         ARouter.getInstance().inject(this)
         binding.secendText.setText(nameva)
+
+        val secondService = ARouter.getInstance().build("/dm/bank").navigation()
+                as DmBankPayService;
+        binding.secendText.setText(secondService.pay(""))
     }
 
 }
