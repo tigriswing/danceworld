@@ -28,6 +28,9 @@ class SecendActivity : AppCompatActivity() {
         val secondService = ARouter.getInstance().build("/dm/bank").navigation()
                 as DmBankPayService;
         binding.secendText.setText(secondService.pay(""))
+
+        val  dmServiceTest = DmServiceTest()
+        dmServiceTest.isSame()
     }
 
 }
